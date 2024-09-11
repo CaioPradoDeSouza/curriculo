@@ -1,0 +1,41 @@
+body{
+
+}
+
+.foto{
+    width: 200px;
+    border-radius: 10px;
+}
+
+.titulos{
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h2{
+    font-size: 16px ;
+}
+
+.sidebar{
+    grid-area: sidebar;
+    background-color: rgb(197, 195, 195);
+    height: 2000px;
+    padding: 20px;
+}
+
+.main{
+    grid-area: main;
+    padding: 20px;
+}
+
+.analista{
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+.grid-container {
+    display: grid;
+    grid-template-areas:
+      'sidebar sidebar main main main main'
+      'sidebar sidebar main main main main'
+      'sidebar sidebar main main main main';
+    gap: 10px;
+   
+}

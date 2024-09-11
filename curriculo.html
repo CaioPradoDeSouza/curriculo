@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Curriculo</title>
+
+    <link rel="stylesheet" href="curriculo.css">
+    <script>
+        window.jsPDF = window.jspdf.jsPDF;
+
+        
+        function imprimir(){
+            var doc = new jsPDF('p', 'mm', [297, 210]);
+            var margin = 10;
+            var scale  = (doc.internal.pageSize.width - margin * 2) / document.body.scrollWidth;
+            doc.html(document.getElementById('curriculum_wellington'), {
+                html2canvas: {
+                    scale: scale, 
+                }, 
+                callback: function(doc) {
+                    // Save the PDF
+                    doc.output('datalnewwindow', {filename: curriculum_wellington.pdf});
+                    doc.save('curriculum_caio.pdf');
+                },
+                width: 1000,
+                windowWidth: 1050
+            });
+            doc.setLanguage("pt-BR");
+        }
+    </script>
+    
+</head>
+<body>
+    <button style="float: right;" class="button" onclick="imprimir()">download PDF</button>
+
+    <div id="curriculum_wellington">
+        <div  class="grid-container" >
+            <div class="sidebar">
+                <img src="./foto/IMG_0965.JPG" alt="foto" class="foto">
+            </div>
+        
+            <div class="main">
+                <h1 class="titulos">Caio Prado de Souza</h1>
+                <p class="analista"> Ánalista desenvolvedor em formação</p>
+                <p>(celular/watsapp) - (11) 9-5998-1071</p>
+                <p>Email - cpssouza7@gmail.com</p>
+                <p>Linkedin - <a href="https://www.linkedin.com/in/caio-prado-de-souza-252845270/">Linkedin - https://www.linkedin.com/in/caio-prado-de-souza-252845270/</a></p>
+                <P> GitHub - <a href="https://github.com/CaioPradoDeSouza">://github.com/CaioPradoDeSouza</a></P>
+                <div>
+
+                    <div>
+                        <h1 class="titulos">Cargo desejado</h1>
+                        <p>Analista desenvolvedor FULLSTACK - nível Estagiário</p>
+                    </div>
+                    <h1 class="titulos">Objetivo</h1>
+                    <p>
+                        Busco uma oportunidade de estágio como analista desenvolvedor fullstack,<br> onde eu possa aplicar e aprimorar minhas habilidades em HTML, CSS, JavaScript, React, Java, SQL e GitHub. 
+                    </p>
+                    <p>
+                        Meu objetivo é contribuir ativamente para projetos desafiadores,<br> adquirindo experiência prática na área desenvolvendo soluções criativas e funcionais para as necessidades dos usuários.
+                    </p>
+                    <p>
+                        Estou comprometido em aprender novas tecnologias e seguir as melhores práticas de desenvolvimento front-end e back-end,<br> visando a criação de interfaces web atraentes, responsivas e intuitivas. 
+                    </p>
+                </div>
+                <div>
+                    <h1 class="titulos">
+                        Formação Acadêmica
+                    </h1>
+                    <ul>
+                        <li>
+                            Análise e Desenvolvimento de Sistemas<br>
+                            IMPACTA TECNOLOGIA - São Paulo, SP, 2023 <br>
+                            Cursando quarto semestre
+                        </li>
+                        <br>
+                        <li>
+                            HTML5 e CSS3 <br>
+                            ALURA - São Paulo, SP, 2022
+                        </li>
+                        <br>
+                        <li>
+                            Lógica de Programação <br>
+                            ALURA - São Paulo, SP, 2022
+                        </li>
+                        <br>
+                        <li>
+                            Empreendedorismo <br>
+                            SENAI - EAD, 2017
+                        </li>
+                        <br>
+                        <li>
+                            Segurança do Trabalho <br>
+                            SENAI - EAD, 2017
+                        </li>
+                        <br>
+                        <li>
+                            Inglês
+                            Básico
+                            <br>
+                            Centro Paula Souza - EAD
+                        </li>
+                        <br>
+                        <li>
+                            Inglês Intermediário <br>
+                            Data Byte - Carapicuiba
+                        </li>
+                        <br>
+                        <li>
+                            Informática Básica <br>
+                            Data Byte - Carapicuiba
+                        </li>
+                        <br>
+                    </ul>
+                </div>
+                <div>
+                    <h1 class="titulos">Idiomas</h1>
+                    <p>
+                        <li>
+                            Inglês - Fluência Intermediária em escrita, leitura e conversação.
+                        </li> 
+                    </p>
+                </div>
+                <div>
+                    <h1 class="titulos">
+                        Habilidades e Competências
+                    </h1>
+                    
+                    <h2>
+                        Ferramentas que possuo afinidade
+                    </h2>
+                    <ul>
+                        <li>
+                            DevOps
+                        </li>
+                        <br>
+                        <li>
+                            HTML5
+                        </li>
+                        <br>
+                        <li>
+                            CSS3
+                        </li>
+                        <br>
+                        <li>
+                            JavaScript
+                        </li>
+                        <br>
+                        <li>
+                            React JS ('nível iniciante')
+                        </li>
+                        <br>
+                        <li>
+                            Java('nível iniciante')
+                        </li>
+                        <br>
+                        <li>
+                            SQL
+                        </li>
+                        <br>
+                        <li>
+                            GitHub
+                        </li>                   
+                    </ul>
+                    <h1 class="titulos">Outras Habilidades</h1>
+                    <ul>
+                        <li>
+                            Comunicação eficaz
+                        </li>
+                        <br>
+                        <li>
+                            Trabalho em equipe
+                        </li>
+                        <br>
+                        <li>
+                            Acompanhamento de tendências e melhores <br>
+                            práticas em desenvolvimento front-end e back-end
+                        </li>
+                        <br>
+                        <li>
+                            Abordagem analítica para solucionar problemas
+                        </li>
+                        <li>
+                            Criatividade e inovação na busca por soluções
+                        </li>
+                    </ul>
+            </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+</body>
+
+</html>
